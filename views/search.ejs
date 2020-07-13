@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+	body{
+		background: url('https://ak.picdn.net/shutterstock/videos/6023729/thumb/1.jpg');
+		background-repeat: no-repeat;
+		background-size: cover; 
+	}
+	.main {
+		margin: 208px auto;
+	}
+	.search {
+		width: 500px;
+		height: 50px;
+		background: lightgrey;
+		outline: none;
+		border: none;
+	}
+	button {
+		background: orange;
+		width: 120px;
+		height: 50px;
+		border: none;
+		margin: 2px -4px;
+		cursor: pointer;
+	}
+	h1 {
+		color: lightgrey;
+	}
+</style>
+
+
+<div class="container">
+	<div class="main text-center">
+		<h1>
+			<i>MOVIES APP</i>
+		</h1>
+		<form action="/results" method="GET">
+			<input type="text" class="search" name="title" placeholder="search for movie">
+			<button type="submit">submit</button>
+		</form>
+	</div>
+</div>
+
+

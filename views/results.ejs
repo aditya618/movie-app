@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+	body{
+		background: url('https://ak.picdn.net/shutterstock/videos/6023729/thumb/1.jpg');
+		background-repeat: no-repeat;
+		background-size: cover; 
+	}
+	h6, h3{
+		color: lightgrey;
+	}
+	.not-found{
+		margin: 142 auto;
+	}
+	
+</style>
+
+<nav class="navbar navbar-dark bg-dark">
+	<a class="navbar-brand" href="/">Movie App</a>
+	<ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Search Again ? <span class="sr-only">(current)</span></a>
+      </li>
+	</ul>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<% if(data && data.Search && data.Search.length > 0) { %>
+<% data.Search.forEach(dt => { %>
+
+		<div style="margin: 30px 0" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<h6><%= dt.Title %></h6>
+				<img style="height: 335px;width:230px" class="img-thumbnail" src=<%= dt.Poster %> />
+		</div>
+
+<% }) %>
+		<% }else{ %>
+		<div class="not-found text-center">
+			<h3>
+				<i>Oops!! Search Not Found..</i>
+			</h3>
+			<h5>
+				<a href="/">Search Again ?</a>
+			</h5>
+		</div>
+		
+		<% } %>
+		</div>
+</div>
+
+
+
